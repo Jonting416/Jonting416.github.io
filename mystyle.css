@@ -1,0 +1,36 @@
+header {
+  text-align: center;
+  background: url("http://i.imgur.com/ph5E30V.jpg");
+  background-size: cover;
+  color: black;
+}
+li {
+  display: inline;
+  padding: 0px 10px 0px 10px
+}
+ul {
+  padding: 10px;
+  background: rgba(0,0,0,0.5);
+}
+img {
+  margin: 40px 0px 0px 0px;
+  border: 20px solid #19194d;
+  border-radius: 25px;
+}
+a {
+  color: white;
+}
+article {
+  max-width: 500px;
+  padding: 20px;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 36px;
+    padding: 5px;
+  }
+  li {
+    padding: 5px;
+    display: block;
+  }
