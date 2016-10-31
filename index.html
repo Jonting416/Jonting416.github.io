@@ -2,16 +2,22 @@
 <head>
   <link href="/normalize.css" rel="stylesheet">
   <link href="mystyle.css" rel="stylesheet" type="text/css">
+   <script type="text/javascript">
+    function setFocus(param)
+    {
+	    param.focus();
+    }
+  </script>
 </head>
 <body>
   <header>
     <img src="http://i.imgur.com/ik9Yrf5.jpg">
     <h1>Jonathan Ting</h1>
     <ul>
-      <li><a href="index.html">About Me</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact Me!</a></li>
-      <li><a href="files/Jon_Ting_Resume_Public.pdf">Resume</a></li>
+      <li><a href="index.html" onmouseover="setFocus(this)">About Me</a></li>
+      <li><a href="projects.html" onmouseover="setFocus(this)">Projects</a></li>
+      <li><a href="contact.html" onmouseover="setFocus(this)">Contact Me!</a></li>
+      <li><a href="files/Jon_Ting_Resume_Public.pdf" onmouseover="setFocus()">Resume</a></li>
     </ul>
   </header>
   <article>
