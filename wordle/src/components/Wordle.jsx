@@ -95,6 +95,10 @@ export default function Wordle() {
         setFailedGuesses([...failedGuesses, currentGuess]);
         setActiveRowIndex((index) => index + 1);
         setActiveLetterIndex(0);
+
+        if (failedGuesses.length === 5) {
+          setNotification(`${SOLUTION}`);
+        }
       }
     } else {
       setNotification("FIVE LETTER WORDS ONLY");
