@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegas Bash Itinerary - Split</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 1.5rem; /* More rounded corners */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            max-width: 1200px; /* Increased max-width for columns */
+            width: 100%;
+            padding: 2.5rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            color: #374151; /* Darker text for readability */
+        }
+        h1 {
+            color: #ef4444; /* Red for emphasis */
+            font-weight: 700;
+        }
+        h2 {
+            color: #4f46e5; /* Indigo for section titles */
+            font-weight: 600;
+        }
+        h3 {
+            color: #1f2937; /* Dark gray for sub-sections */
+            font-weight: 600;
+        }
+        .section-divider {
+            border-top: 1px dashed #d1d5db; /* Dashed line for a subtle break */
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .activity-item {
+            background-color: #f9fafb;/* Slightly different background for activity blocks */
+            border-left: 4px solid #20c997; /* Indigo border on the left */
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .joint-event-item {
+            background-color: #f9fafb; /* Light teal background */
+            border-left: 4px solid #6366f1; /* Vibrant teal border */
+        }
+        .emoji {
+            margin-right: 0.5rem;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #ec4899, #ef4444); /* Pink to Red gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Specific styles for the columns */
+        .column-header {
+            font-weight: 700;
+            text-align: center;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        .boy-column-header {
+            color: #3b82f6; /* Blue for boys */
+        }
+        .girl-column-header {
+            color: #ec4899; /* Pink for girls */
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .itinerary-grid {
+                grid-template-columns: 1fr !important; /* Stack columns on small screens */
+            }
+            .itinerary-grid > div {
+                border-right: none !important; /* Remove right border on small screens */
+                border-bottom: 1px solid #e5e7eb; /* Add bottom border between stacked columns */
+                padding-bottom: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .itinerary-grid > div:last-child {
+                border-bottom: none; /* No bottom border for the last stacked column */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="text-center mb-10">
+            <h1 class="text-5xl mb-4 leading-tight">
+                <span class="gradient-text">JT&TT's Vegas Bachelor-Bachelorette</span>
+            </h1>
+        
+            <p class="text-lg text-gray-500 mt-2">📍 Las Vegas, Nevada • 🗓️ July 18 – July 20</p>
+
+        </header>
+
+        <div class="section-divider"></div>
+
+        <section class="mb-10">
+            <h2 class="text-3xl mb-8 text-center">🗺️ Weekend Itinerary 🗺️</h2>
+
+	    <h3 class="text-center mb-10"> Joint Events are indigo, separate events are green.</h3>
+
+            <!-- Day 1 -->
+            <div class="mb-12">
+                <h3 class="text-2xl mb-6 flex items-center justify-center">
+                    <span class="emoji">🗓️</span> Day 1: Friday, July 18
+                </h3>
+                <!-- Joint Event -->
+                <div class="activity-item joint-event-item mt-6">
+                    <p class="font-semibold text-lg mb-1">Arrivals <span class="emoji">✈️</span></p>
+		    <p><span class="font-medium"></span> Thurs Jieru Arrives</p>
+                    <p><span class="font-medium"></span> 11:00AM NOVA Group Arrives (Eric, Adrien)</p>
+                    <p><span class="font-medium"></span> 2:44PM Seattle Group Arrives (Thu, Jon, Dom, Courtney, Ruolin, Jessica, Alex, Tiffany, Hua, Sean)</p>
+                    <p><span class="font-medium"></span> 7:00PM Nancy Arrives</p>
+                    <p><span class="font-medium"></span> 8:00PM Katana & Jennifer Arrives</p>
+                    <p><span class="font-medium"></span> 12:00AM Patrick Arrives</p>
+                </div>
+
+                <div class="activity-item joint-event-item mt-6">
+                    <p class="font-semibold text-lg mb-1">Airbnb Check In <span class="emoji">🏨</span></p>
+                    <p><span class="font-medium"></span> 4:00PM</p>
+                    <p><span class="font-medium"></span> Address: [To be sent closer to the event]</p>
+                </div>
+
+                <div class="activity-item joint-event-item mt-6">
+                    <p class="font-semibold text-lg mb-1">Casual Dinner <span class="emoji">🍽️</span></p>
+                    <p><span class="font-medium"></span> 6:30PM </p>
+                    <p><span class="font-medium"></span> [Location TBD] </p>
+                    <p class="text-sm text-gray-600">For people who have arrived in Vegas, lets figure out dinner together!</p>
+                </div>
+
+                <div class="activity-item joint-event-item mt-6">
+                    <p class="font-semibold text-lg mb-1">Icebreakers <span class="emoji">🧊🔨</span></p>
+                    <p><span class="font-medium"></span> 10:00PM </p>
+		    <p><span class="font-medium"></span> Games to get to know each other </p>
+                    <p><span class="font-medium"></span> Hosted by Eric, Jieru, Alex, Thu&Jon </p>
+                </div>
+
+            <!-- Day 2 -->
+            <div class="mb-12">
+                <h3 class="text-2xl mb-6 flex items-center justify-center">
+                    <span class="emoji">🗓️</span> Day 2: Saturday, July 19
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 itinerary-grid">
+                    <!-- Team Jon Events Column -->
+                    <div class="border-r md:border-r-2 border-gray-200 pr-3 md:pr-6">
+                        <h4 class="text-xl column-header boy-column-header">🤵 Team Jon</h4>
+                        <div class="space-y-4">
+                            <div class="activity-item">
+                                <p class="font-semibold text-lg mb-1">Lunch <span class="emoji">🍽️</span></p>
+                                <p><span class="font-medium"></span> 11:00AM</p>
+                                <p><span class="font-medium">Lunch @ 888 Sushi and Robata (AYCE SUSHI)</p>
+				<p class="text-sm text-gray-600">Any suggestions for lunch? </p>
+                            </div>
+                            <div class="activity-item">
+                                <p class="font-semibold text-lg mb-1">Casino Quest <span class="emoji">🎲</span></p>
+                                <p><span class="font-medium"></span> 2:00PM</p>
+                                <p><span class="font-medium"></span> Address: 3100 W Sahara Ave Suite 102, Las Vegas, NV 89102</p>
+                                <p class="text-sm text-gray-600">Followed by gambling on the strip</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Thu Events Column -->
+                    <div class="pl-3 md:pl-6">
+                        <h4 class="text-xl column-header girl-column-header">👰 Team Thu</h4>
+                        <div class="space-y-4">
+                            <div class="activity-item">
+                                <p class="font-semibold text-lg mb-1">Lunch <span class="emoji">🍽️</span></p>
+                                <p><span class="font-medium"></span> 11:00AM</p>
+                                <p><span class="font-medium">Lunch @ Eggslut</p>
+                                <p><span class="font-medium">Address: Boulevard Tower, 3708 Las Vegas Blvd S Level 2, Las Vegas, NV 89109</p>
+                            </div>
+                            <div class="activity-item">
+                                <p class="font-semibold text-lg mb-1">The Escape Game <span class="emoji">🔒🔑</span></p>
+                                <p><span class="font-medium"></span> 2:30PM</p>
+                                <p><span class="font-medium"></span> Address: 3500 Las Vegas Blvd S Ste M-9, Las Vegas, NV 89109</p>
+                                <p class="text-sm text-gray-600">Followed by gambling / exploring the strip</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Joint Event after columns -->
+                <div class="activity-item joint-event-item mt-6">
+                    <p class="font-semibold text-lg mb-1">Dinner at Airbnb <span class="emoji"></span></p>
+                    <p><span class="font-medium"></span> 6:00PM</p>
+                    <p><span class="font-medium"></span> Jon will pickup Canes & Tacos El Gordo for the Airbnb</p>
+                    <p class="text-sm text-gray-600">Optionally, folks that aren't ready to head home can stay on the strip</p>
+                </div>
+
+                <div class="activity-item joint-event-item mt-6">
+                    <p class="font-semibold text-lg mb-1">Chill / Nap Time <span class="emoji">❄️</span></p>
+                    <p><span class="font-medium"></span> 7:00PM-9:00PM </p>
+                    <p class="text-sm text-gray-600">Rest and club prep time.</p>
+                </div>
+            
+                <div class="activity-item joint-event-item mt-6">
+                    <p class="font-semibold text-lg mb-1">Clerb Pregame <span class="emoji">🕺🥂</span></p>
+                    <p><span class="font-medium"></span> 10:00PM </p>
+                    <p><span class="font-medium"></span> Drinking Games Hosted by the Boyz </p>
+                </div>
+                
+                <div class="activity-item joint-event-item mt-6">
+                    <p class="font-semibold text-lg mb-1">Zedd at the Omnia <span class="emoji">🎶🍾</span></p>
+                    <p><span class="font-medium"></span> 11:30PM </p>
+                    <p><span class="font-medium"></span> Address: 3570 S Las Vegas Blvd, Las Vegas, NV 89109</p>
+                    <p class="text-sm text-gray-600"> Girls in Black! Boys note the Vegas club attire guidelines. </p>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="mb-12">
+                <h3 class="text-2xl mb-6 flex items-center justify-center">
+                    <span class="emoji">🗓️</span> Day 3: Sunday, July 20
+                </h3>
+                <!-- Joint Event -->
+                <div class="activity-item joint-event-item mt-6">
+                    <p class="font-semibold text-lg mb-1">Morning Refresh & Fuel Up <span class="emoji">☀️☕</span></p>
+                    <p><span class="font-medium"></span> 12:00PM-ish</p>
+                    <p><span class="font-medium"></span> Breakfast / Light Lunch </p>
+                    <p class="text-sm text-gray-600">Notes: Folks likely to get up late depending on how late the night goes. Can pickup food or go out.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 itinerary-grid">
+                    <!-- Team Jon Events Column -->
+                    <div class="border-r md:border-r-2 border-gray-200 pr-3 md:pr-6">
+                        <h4 class="text-xl column-header boy-column-header">🤵 Team Jon</h4>
+                        <div class="space-y-4">
+                            <div class="activity-item">
+                                <p class="font-semibold text-lg mb-1">The Escape Game <span class="emoji">🔒🔑</span></p>
+                                <p><span class="font-medium"></span> 2:30PM</p>
+                                <p><span class="font-medium"></span> Address: 3500 Las Vegas Blvd S Ste M-9, Las Vegas, NV 89109</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Thu Events Column -->
+                    <div class="pl-3 md:pl-6">
+                        <h4 class="text-xl column-header girl-column-header">👰 Team Thu</h4>
+                        <div class="space-y-4">
+                            <div class="activity-item">
+                                <p class="font-semibold text-lg mb-1">Casino Quest <span class="emoji">🎲</span></p>
+                                <p><span class="font-medium"></span> 3:00PM </p>
+                                <p><span class="font-medium"></span> Address: 3100 W Sahara Ave Suite 102, Las Vegas, NV 89102 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Joint Event after columns -->
+                <div class="activity-item joint-event-item mt-6">
+                    <p class="font-semibold text-lg mb-1">Early Dinner at Bacchanal <span class="emoji">🥘</span></p>
+                    <p><span class="font-medium"></span> 4:45PM</p>
+                    <p><span class="font-medium"></span> 3570 Las Vegas Blvd S, Las Vegas, NV 89109</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 itinerary-grid">
+                    <!-- Team Jon Events Column -->
+                    <div class="border-r md:border-r-2 border-gray-200 pr-3 md:pr-6">
+                        <h4 class="text-xl column-header boy-column-header">🤵 Team Jon</h4>
+                        <div class="space-y-4">
+                            <div class="activity-item">
+                                <p class="font-semibold text-lg mb-1">Board Games and Vibe <span class="emoji">♟️🎲</span></p>
+                                <p><span class="font-medium"></span> 7:00PM</p>
+                                <p><span class="font-medium"></span> At Airbnb</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Thu Events Column -->
+                    <div class="pl-3 md:pl-6">
+                        <h4 class="text-xl column-header girl-column-header">👰 Team Thu</h4>
+                        <div class="space-y-4">
+                            <div class="activity-item">
+                                <p class="font-semibold text-lg mb-1">Absinthe <span class="emoji">🎭✨</span></p>
+                                <p><span class="font-medium"></span> 8:00PM </p>
+                                <p><span class="font-medium"></span> Address: 3570 Las Vegas Blvd S Las Vegas, NV 89109 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Joint Event after columns -->
+                <div class="activity-item joint-event-item mt-6">
+                    <p class="font-semibold text-lg mb-1">Closing Activity<span class="emoji">🎉</span></p>
+                    <p><span class="font-medium"></span> 11:00PM </p>
+                    <p><span class="font-medium">Closing Activity Hosted by Courtney and Dom</p>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="mb-12">
+                <h3 class="text-2xl mb-6 flex items-center justify-center">
+                    <span class="emoji">🗓️</span> Day 4: Monday, July 21
+                </h3>
+                <!-- Joint Event -->
+                <div class="activity-item joint-event-item mt-6">
+                    <p class="font-semibold text-lg mb-1">Checkout <span class="emoji">🏨</span></p>
+                    <p><span class="font-medium"></span> 10:00AM</p>
+                </div>
+
+                <div class="activity-item joint-event-item mt-6">
+                    <p class="font-semibold text-lg mb-1">Departures <span class="emoji">✈️</span></p>
+                    <p><span class="font-medium"></span> 8:30AM, Jennifer Leaves</p>
+		    <p><span class="font-medium"></span> 11:00AM, NOVA Group Leaves</p>
+		    <p><span class="font-medium"></span> 1:00PM Nancy Leaves</p>
+                    <p><span class="font-medium"></span> 2:00PM Seattle Group Leaves</p>
+                    <p><span class="font-medium"></span> 10:00PM Jieru, Katana Leaves</p>
+                </div>
+
+
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="mb-10">
+            <h2 class="text-3xl mb-6 text-center">📋 Pre-Trip Checklist & Important Info 📋</h2>
+            <ul class="space-y-3 px-4 md:px-8">
+                <li class="flex items-start text-lg">
+                <li class="text-lg">
+                    <span class="font-medium">Airbnb Room Assignments [See Pinned Group Chat Messages]</span>
+                    <ul class="list-disc list-inside ml-6 text-gray-700">
+                        <li>Bedroom 1: Jennifer, Nancy, Jieru</li>
+                        <li>Bedroom 2: Sean, Alex</li>
+                        <li>Bedroom 3: Eric, Adrien, Patrick</li>
+                        <li>Bedroom 4: Jessica, Ruolin, Katana</li>
+                        <li>Bedroom 5: Thu, Jon, Dom, Courtney</li>
+                        <li>Bedroom 6: Tiffany, Charles</li>
+                    </ul>
+                </li>
+
+                <li class="text-lg">
+                    <span class="font-medium">Packing Essentials:</span>
+                    <ul class="list-disc list-inside ml-6 text-gray-700">
+                        <li>Clubbing Outfit (Girls wear black)</li>
+                        <li>Earplugs</li>
+                        <li>Swimwear</li>
+                        <li>Cash (if gambling)</li>
+                        <li>Comfortable walking shoes</li>
+                        <li>Sunscreen, hat, sunglasses</li>
+                        <li>Chargers</li>
+                        <li>Board Games (optional)</li>
+                        <li>The Vibes</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <footer class="text-center text-gray-500 text-lg mt-10">
+            <p>❤️ A Note from Thu & Jon ❤️</p>
+            <p class="mt-2">
+                We seriously can't wait to see and celebrate with all of you soon! Reach out with any questions!
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
