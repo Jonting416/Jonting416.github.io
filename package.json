@@ -19,6 +19,7 @@
     "url": "git+https://github.com/Jonting416/Jonting416.github.io.git"
   },
   "dependencies": {
+    "@jaredreisinger/react-crossword": "^5.2.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-popover": "^1.0.7",

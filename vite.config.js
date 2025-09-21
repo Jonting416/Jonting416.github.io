@@ -12,7 +12,8 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 wordle: resolve(__dirname, 'wordle/index.html'),
-                connections: resolve(__dirname, 'connections/index.html')
+                connections: resolve(__dirname, 'connections/index.html'),
+                crossword: resolve(__dirname, 'crossword/index.html'),
             }
         }
     },
