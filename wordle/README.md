@@ -2,7 +2,7 @@
 
 This is borrowed from alekspopovic's repository at https://github.com/alekspopovic/wordle/!
 
-![Wordle Clone](./src/assets/wordleBg.png)
+![Wordle Clone](src/assets/wordleBg.png)
 
 Welcome to my Wordle Clone project! This is a fully functional Wordle game clone which replicates most, if not all, of its classic features. This project was built for a [tutorial on my YouTube channel](https://youtu.be/YmRS04CLarY).
 

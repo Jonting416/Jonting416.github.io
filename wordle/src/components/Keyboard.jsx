@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Keyboard.scss";
-import { LETTERS } from "../data/lettersAndWords";
-import Key from "./Key";
+import { LETTERS } from "../data/lettersAndWords.js";
+import Key from "./Key.jsx";
 
 export default function Keyboard({
   absentLetters,

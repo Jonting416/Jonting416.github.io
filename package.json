@@ -1,5 +1,6 @@
 {
   "name": "jonting416.github.io",
+  "private": true,
   "workspaces": ["wordle"],
   "version": "1.0.0",
   "description": "jonting's personal website",

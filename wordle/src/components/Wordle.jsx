@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import "../styles/Wordle.scss";
-import Row from "./Row";
-import Keyboard from "./Keyboard";
-import { LETTERS, potentialWords } from "../data/lettersAndWords";
+import Row from "./Row.jsx";
+import Keyboard from "./Keyboard.jsx";
+import { LETTERS, potentialWords } from "../data/lettersAndWords.js";
 
 const SOLUTION =
   potentialWords[Math.floor(Math.random() * potentialWords.length)];
