@@ -53,6 +53,9 @@ function InfoModal() {
             <AccordionItem value="item-1">
               <AccordionTrigger>Who Are Y'all?</AccordionTrigger>
               <AccordionContent>
+                This particular version of the connections game is pulled from
+                andcomputers, written at https://github.com/and-computers/react-connections-game.
+                Original text below: <br/>
                 This project is brought to you by andcomputers, feel free to
                 subscribe to our writing and other experiments.{" "}
                 <a

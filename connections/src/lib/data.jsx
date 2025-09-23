@@ -18,7 +18,6 @@ export const CONNECTION_GAMES = [
       difficulty: 3,
       imageSrc: "https://i.ibb.co/4MwD7zv/Connections-3.png",
     },
-
     {
       category: "Boyz II Men",
       words: ["Michael", "Nathan", "Wanyá", "Shawn"],

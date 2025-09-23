@@ -15,7 +15,7 @@ import GameControlButtonsPanel from "../GameControlButtonsPanel";
 import ViewResultsModal from "../modals/ViewResultsModal";
 
 function Game() {
-  const { gameData, categorySize, numCategories } =
+  const { gameData, categorySize, numCategories, puzzleIndex } =
     React.useContext(PuzzleDataContext);
   const { submittedGuesses, solvedGameData, isGameOver, isGameWon } =
     React.useContext(GameStatusContext);
@@ -64,6 +64,8 @@ function Game() {
     <>
       <h3 className="text-xl text-center mt-4">
         Create {numCategories} groups of {categorySize}
+        <br/>
+        You are on puzzle {puzzleIndex}
       </h3>
 
       <div className={`game-wrapper`}>

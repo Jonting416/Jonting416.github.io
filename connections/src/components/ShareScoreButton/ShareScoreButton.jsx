@@ -22,7 +22,7 @@ function ShareScoreButton({ buttonText = "Share", className = "" }) {
     toast({
       label: "Notification",
       title: "",
-      description: "Was unable to copy to clipboard / share.",
+      description: "Was unable to copy to clipboard.",
     });
   }
   return (

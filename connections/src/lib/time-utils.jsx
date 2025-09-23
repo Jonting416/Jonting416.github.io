@@ -1,111 +1,47 @@
-import {
-  addDays,
-  differenceInDays,
-  formatISO,
-  parseISO,
-  startOfDay,
-  startOfToday,
-  startOfYesterday,
-} from "date-fns";
-
 import queryString from "query-string";
 
-import { CONNECTION_GAMES } from "./data";
+import {CONNECTION_GAMES} from "./data";
+import {random} from "./utils";
 
-export const getToday = () => startOfToday();
-export const getYesterday = () => startOfYesterday();
-
-// October 2023 Game Epoch
-// https://stackoverflow.com/questions/2552483/why-does-the-month-argument-range-from-0-to-11-in-javascripts-date-constructor
-export const firstGameDate = new Date(2023, 9, 23);
-export const periodInDays = 7;
-
-export const getLastGameDate = (today) => {
-  const t = startOfDay(today);
-  let daysSinceLastGame = differenceInDays(t, firstGameDate) % periodInDays;
-  return addDays(t, -daysSinceLastGame);
-};
-
-export const getNextGameDate = (today) => {
-  return addDays(getLastGameDate(today), periodInDays);
-};
-
-export const isValidGameDate = (date) => {
-  if (date < firstGameDate || date > getToday()) {
-    return false;
-  }
-
-  return differenceInDays(firstGameDate, date) % periodInDays === 0;
-};
-
-export const getIndex = (gameDate) => {
-  let start = firstGameDate;
-  let index = -1;
-  console.log(firstGameDate);
-  do {
-    index++;
-    start = addDays(start, periodInDays);
-  } while (start <= gameDate);
-
-  return index;
-};
-
-export const getPuzzleOfDay = (index) => {
+export const getPuzzleAtIndex = (index) => {
   if (index < 0) {
-    throw new Error("Invalid index");
+    index = random(0, CONNECTION_GAMES.length - 1);
   }
 
   return CONNECTION_GAMES[index % CONNECTION_GAMES.length];
 };
 
-export const getSolution = (gameDate) => {
-  const nextGameDate = getNextGameDate(gameDate);
-  const index = getIndex(gameDate);
-  const puzzleOfTheDay = getPuzzleOfDay(index);
-  console.log("index for today: ", index);
+export const getSolution = (index) => {
+  const puzzleOfTheDay = getPuzzleAtIndex(index);
+  console.log("index on load: ", index);
   return {
     puzzleAnswers: puzzleOfTheDay,
-    puzzleGameDate: gameDate,
     puzzleIndex: index,
-    dateOfNextPuzzle: nextGameDate.valueOf(),
   };
 };
 
-export const getGameDate = () => {
-  if (getIsLatestGame()) {
-    return getToday();
+export const getGameIndex = () => {
+  if (getGameIndexInQueryString()) {
+    console.log("Detected query string param `d`.")
+    const parsed = queryString.parse(window.location.search);
+    console.log("Attempted to parse: ", parsed);
+    try {
+      return parseInt(parsed.d?.toString());
+    } catch (e) {
+      console.log(e);
+    }
   }
 
-  const parsed = queryString.parse(window.location.search);
-  try {
-    const d = startOfDay(parseISO(parsed.d?.toString()));
-    if (d >= getToday() || d < firstGameDate) {
-      setGameDate(getToday());
-    }
-    return d;
-  } catch (e) {
-    console.log(e);
-    return getToday();
-  }
+  return random(0, CONNECTION_GAMES.length - 1);
 };
 
-export const setGameDate = (d) => {
-  try {
-    if (d < getToday()) {
-      window.location.href = "/?d=" + formatISO(d, { representation: "date" });
-      return;
-    }
-  } catch (e) {
-    console.log(e);
-  }
-  window.location.href = "/";
-};
-
-export const getIsLatestGame = () => {
+// If the queryparam `d` is present, assume the game index is specified.
+export const getGameIndexInQueryString = () => {
   // https://github.com/cwackerfuss/react-wordle/pull/505
   const parsed = queryString.parse(window.location.search);
-  return parsed === null || !("d" in parsed);
+  console.log("Attempted to parse: ", parsed);
+  return "d" in parsed;
 };
 
-export const { puzzleAnswers, puzzleGameDate, puzzleIndex, dateOfNextPuzzle } =
-  getSolution(getGameDate());
+export const { puzzleAnswers, puzzleIndex } =
+  getSolution(getGameIndex());
