@@ -1,8 +1,8 @@
 # Crossword in React
 
-This is an implementation of the react crossword in https://github.com/JaredReisinger/react-crossword.
+This is a page which embeds a crossword made in [crosshare](https://crosshare.org)
 
-Pretty much everything is there.
+iFrame Embedding is great!
 
 # Usage
 
