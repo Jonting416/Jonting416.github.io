@@ -5,7 +5,7 @@
 html {
   overflow-y: scroll;
 
-  --game-spacing: 32px;
+  --game-spacing: 16px;
   --header-height: 4rem;
 
   --color-success: hsl(150deg 70% 30%);
@@ -25,9 +25,9 @@ body {
   font-family: sans-serif;
 }
 
-@media (max-height: 600px) {
+@media (width >= 48rem) {
   body {
-    --game-spacing: 8px;
+    --game-spacing: 32px;
   }
 }
 
@@ -73,7 +73,7 @@ h1 {
   padding-left: var(--game-spacing);
   padding-right: var(--game-spacing);
   margin: 0 auto;
-  min-width: max(300px, 55vh, 40%);
+  min-width: max(300px, 55vw);
   max-width: min(500px, 58vh, 100%);
 }
 

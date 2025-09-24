@@ -1,29 +1,29 @@
 export const CONNECTION_GAMES = [
   [
     {
-      category: "Black Women Authors",
-      words: ["Toni", "Paule", "Zora", "Alice"],
+      category: "Lynx & Aria's Favorite Toys",
+      words: ["Platypus", "Worm", "Mouse", "String"],
       difficulty: 1,
-      imageSrc: "https://i.ibb.co/Gn36Ypb/Connections-1.png",
+      imageSrc: "https://dsom-imager-prod.shipt.com/79423243-27/3515bab404328ab9a83ec81f2b21d60d.jpeg",
     },
     {
-      category: "Michael ____",
-      words: ["Jackson", "Jordan", "Johnson", "Tyson"],
+      category: "First word of Music Festivals Thu & Jon have been to",
+      words: ["Coach", "Electric", "Beyond", "Moon"],
       difficulty: 2,
-      imageSrc: "https://i.ibb.co/3B44zXX/Connections-2.png",
+      imageSrc: "https://cdn.mos.cms.futurecdn.net/3RDtYmUyrVsJZdBzD3rb6E.jpg",
     },
     {
-      category: "Black Greek Sorority Symbols",
-      words: ["Poodle", "Dove", "Ivy", "Pyramid"],
+      category: "Industries Thu or Jon have worked in",
+      words: ["Aviation", "Data", "Quantum", "Retail"],
       difficulty: 3,
-      imageSrc: "https://i.ibb.co/4MwD7zv/Connections-3.png",
+      imageSrc: "https://images.techadvisor.com/cmsdata/slideshow/3634008/funny_tech_memes_2.jpg",
     },
     {
-      category: "Boyz II Men",
-      words: ["Michael", "Nathan", "Wanyá", "Shawn"],
+      category: "First Word of Apartments Thu & Jon have lived in",
+      words: ["Century", "Amli", "Modera", "Main"],
       difficulty: 4,
       imageSrc:
-        "https://i.ibb.co/V2vnr5P/boys2men-2-d53afdddf480401fac1204a3954aa5f6.webp",
+        "https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Ff0etq3yado071.jpg",
     },
   ],
   [
