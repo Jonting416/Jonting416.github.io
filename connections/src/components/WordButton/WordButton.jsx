@@ -40,7 +40,7 @@ function WordButton({ word, fullCandidateSize }) {
   //const fontSizeByWordLength = 9characters works with 0.6rem
 
   function getFontSize(word) {
-    const baseLength = 7;
+    const baseLength = 8;
     const wordLength = word.length;
     let fontSize = 1;
     if (wordLength > baseLength) {
@@ -62,7 +62,7 @@ function WordButton({ word, fullCandidateSize }) {
     >
       <p
         style={{ fontSize: getFontSize(word) }}
-        className="font-space-mono uppercase sm:text-base md:text-xl"
+        className="font-bold uppercase sm:text-base md:text-xl"
       >
         {word}
       </p>

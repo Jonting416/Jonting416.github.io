@@ -92,13 +92,14 @@ function GameControlButtonsPanel({
   return (
     <div className="grid grid-cols-3 gap-4">
       <Button
+        // className="bg-transparent outline-[#f5f4ee]"
         disabled={isGameOver}
         variant="secondary"
         onClick={() =>
           setShuffledRows(shuffleGameData({ gameData: shuffledRows }))
         }
       >
-        <Shuffle className="h-4 w-4 mr-2" strokeWidth={1} />
+        {/*<Shuffle className="h-4 w-4 mr-2" strokeWidth={1} />*/}
         <p className="select-none">Shuffle</p>
       </Button>
       <Button
@@ -107,7 +108,7 @@ function GameControlButtonsPanel({
         variant="secondary"
         onClick={deselectAll}
       >
-        <Undo className="h-4 w-4 mr-2" strokeWidth={1} />
+        {/*<Undo className="h-4 w-4 mr-2" strokeWidth={1} />*/}
         <p className="select-none">Deselect All</p>
       </Button>
       <Button
@@ -115,7 +116,7 @@ function GameControlButtonsPanel({
         onClick={submitCandidateGuess}
         disabled={isGameOver || guessCandidate.length !== categorySize}
       >
-        <SendHorizontal className="h-4 w-4 mr-2" strokeWidth={1} />
+        {/*<SendHorizontal className="h-4 w-4 mr-2" strokeWidth={1} />*/}
         <p className="select-none">Submit</p>
       </Button>
     </div>

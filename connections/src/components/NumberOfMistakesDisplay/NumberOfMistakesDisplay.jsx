@@ -10,7 +10,7 @@ function SingleMistakeDisplay({ isUsed }) {
       {isUsed ? (
         <CircleSlash className="h-4 w-4 mt-1 stroke-neutral-400" />
       ) : (
-        <Circle className="h-4 w-4 mt-1 fill-green-300 stroke-cyan-300" />
+        <Circle className="h-4 w-4 mt-1 fill-green-300 stroke-green-300" />
       )}
     </div>
   );

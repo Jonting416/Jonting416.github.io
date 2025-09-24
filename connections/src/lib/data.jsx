@@ -23,7 +23,7 @@ export const CONNECTION_GAMES = [
       words: ["Century", "Amli", "Modera", "Main"],
       difficulty: 4,
       imageSrc:
-        "https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Ff0etq3yado071.jpg",
+        "https://i.imgflip.com/89hnmc.jpg",
     },
   ],
   [

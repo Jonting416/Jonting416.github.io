@@ -6,7 +6,8 @@ import InfoModal from "../modals/InfoModal";
 function Header() {
   return (
     <header>
-      <h1 className="font-space-mono">{GAME_TITLE}</h1>
+        <span className="w-[24px] font-bold uppercase sm:text-base md:text-xl"></span>
+      <h1>{GAME_TITLE}</h1>
       <InfoModal />
     </header>
   );

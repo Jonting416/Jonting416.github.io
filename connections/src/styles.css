@@ -6,9 +6,10 @@ html {
   overflow-y: scroll;
 
   --game-spacing: 16px;
-  --header-height: 4rem;
 
+  --header-height: 4rem;
   --color-success: hsl(150deg 70% 30%);
+
   --color-warning: hsl(50deg 100% 30%);
   --color-error: hsl(0deg 70% 45%);
   --color-gray-100: hsl(0deg 0% 10%);
@@ -22,7 +23,8 @@ html {
     Custom styles
   */
 body {
-  font-family: sans-serif;
+  font-family: Segoe UI, monospace;
+  color: var(--color-amber-200); /* oklch(92.4% 0.12 95.746) */ /* REMOVE THIS; THIS IS ORANGE TO MAKE IT EASY TO SPOT WHAT IS NOT DEFINED */
 }
 
 @media (width >= 48rem) {
@@ -41,7 +43,7 @@ header {
   display: flex;
   height: var(--header-height);
   border-bottom: 1px solid var(--color-gray-700);
-  color: var(--color-gray-300);
+  /*color: var(--color-gray-300);*/
 }
 
 header .side {
@@ -94,11 +96,11 @@ h1 {
 
 .happy.banner {
   background: var(--color-success);
-  color: white;
+  color: black;
 }
 .sad.banner {
   background: var(--color-error);
-  color: white;
+  color: black;
 }
 
 .visually-hidden {
