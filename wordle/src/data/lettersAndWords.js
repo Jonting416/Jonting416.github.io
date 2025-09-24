@@ -5,6 +5,16 @@ export const LETTERS = [
     'z', 'x', 'c', 'v', 'b', 'n', 'm'
   ];
 
+export const potentialAnswers = [
+    "kitty",
+    "cutie",
+    "marry",
+    "dance",
+    "steak",
+    "booze",
+    "creek",
+]
+
 export const potentialWords = [
   "aahed",
   "aalii",
