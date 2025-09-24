@@ -23,10 +23,10 @@ function WordRow({ words }) {
 
 export function SolvedWordRow({ ...props }) {
   const DIFFICULTY_COLOR_MAP = {
-    1: "rgb(74 222 128)", // green
-    2: "rgb(251 191 36)", // amber
-    3: "rgb(129 140 248)", //indigo
-    4: "rgb(34 211 238)", //cyan
+    1: "rgb(173 191 112)", // green
+    2: "rgb(240 221 134)", // amber
+    3: "rgb(183 196 233)", // cyan
+    4: "rgb(169 136 190)", // violet
   };
 
   const color = `${DIFFICULTY_COLOR_MAP[props.difficulty]}`;
@@ -50,8 +50,8 @@ export function SolvedWordRow({ ...props }) {
     <animated.div style={springProps}>
       {!isImageAvailable ? (
         <div style={{ backgroundColor: color, borderRadius: 8 }}>
-          <p className="font-bold pt-2 pl-4">{props.category}</p>
-          <p className="font-thin pb-2 pl-4">{props.words.join(", ")}</p>
+          <p className="text-neutral-800 font-bold pt-2 pl-4">{props.category}</p>
+          <p className="text-neutral-800 font-thin pb-2 pl-4">{props.words.join(", ")}</p>
         </div>
       ) : (
         <Popover>
@@ -66,8 +66,8 @@ export function SolvedWordRow({ ...props }) {
                   View More
                 </Badge>
               )}
-              <p className="font-bold pt-2 pl-4">{props.category}</p>
-              <p className="font-thin pb-2 pl-4">{props.words.join(", ")}</p>
+              <p class="font-bold pt-2 pl-4 text-neutral-800">{props.category}</p>
+              <p class="font-thin pb-2 pl-4 text-neutral-800">{props.words.join(", ")}</p>
             </div>
           </PopoverTrigger>
           <PopoverContent>
