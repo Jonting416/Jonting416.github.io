@@ -150,7 +150,11 @@ export default function Wordle() {
       }}
       onKeyDown={handleKeyDown}
     >
-      <h1 className="title">Wordle Clone</h1>
+      <header className="header-bar">
+        <a href="../index.html">
+          <img className="logo" href="index.html" src="/data/jtgameslogo.svg" alt="???"/>
+        </a>
+      </header>
       <div className={`notification ${solutionFound && "notification--green"}`}>
         {notification}
       </div>
