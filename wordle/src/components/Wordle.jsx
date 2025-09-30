@@ -152,7 +152,7 @@ export default function Wordle() {
     >
       <header className="header-bar">
         <a href="../index.html">
-          <img className="logo" href="index.html" src="/data/jtgameslogo.svg" alt="???"/>
+          <img className="logo" href="index.html" src="/data/jtgameslogoinverted.svg" alt="???"/>
         </a>
       </header>
       <div className={`notification ${solutionFound && "notification--green"}`}>
