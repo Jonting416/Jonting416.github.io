@@ -8,3 +8,8 @@ export const loadGameStateFromLocalStorage = () => {
   const state = localStorage.getItem(gameStateKey);
   return state ? JSON.parse(state) : null;
 };
+
+export const clearLocalStorage = () => {
+  localStorage.clear();
+  location.reload();
+}
