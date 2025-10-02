@@ -6,13 +6,17 @@ export const LETTERS = [
   ];
 
 export const potentialAnswers = [
-    "kitty",
-    "cutie",
-    "marry",
-    "dance",
-    "steak",
-    "booze",
-    "creek",
+  "kitty",
+  "cutie",
+  "marry",
+  "dance",
+  "steak",
+  "booze",
+  "creek",
+  "party",
+  "happy",
+  "drink",
+  "cheer",
 ]
 
 export const potentialWords = [
