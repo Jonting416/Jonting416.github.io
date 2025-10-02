@@ -41,12 +41,34 @@ function WordButton({ word, fullCandidateSize }) {
 
   function getFontSize(word) {
     const baseLength = 8;
+    const minimumSize = 0.75;
     const wordLength = word.length;
+
     let fontSize = 1;
     if (wordLength > baseLength) {
-      const numExtraChars = wordLength - baseLength;
-      fontSize = fontSize - numExtraChars * 0.1;
-      fontSize = Math.max(0.5, fontSize);
+      fontSize = word
+        .split(/\s+/)
+        .filter((word) => word.length > 0)
+        .map(word => {
+          const multiWordLength = word.length;
+
+          if (multiWordLength > baseLength) {
+            const numExtraChars = multiWordLength - baseLength;
+            let fontSize = 1;
+
+            // Original calculation: fontSize = fontSize - numExtraChars * 0.1;
+            fontSize -= numExtraChars * 0.1;
+
+            // Original constraint: Math.max(0.5, fontSize);
+            return Math.max(minimumSize, fontSize);
+          } else {
+            // Return Infinity if the condition isn't met (original code returned null).
+            // Infinity is a mathematically safe substitute for 'null' when finding the minimum.
+            return Infinity;
+          }
+        })
+        .reduce((min, current) => Math.min(min, current), Infinity);
+
       return `${fontSize}em`;
     } else {
       return null;
