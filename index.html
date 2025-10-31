@@ -1,120 +1,209 @@
-xlanding<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vegas Bash Itinerary - Split</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Light gray background */
-            display: flex;
-            justify-content: center;
-            padding: 1rem;
-        }
-        .container {
-            background-color: #ffffff;
-            border-radius: 1.5rem; /* More rounded corners */
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            max-width: 1200px; /* Increased max-width for columns */
-            width: 100%;
-            padding: 2.5rem;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            color: #374151; /* Darker text for readability */
-        }
-        h1 {
-            color: #ef4444; /* Red for emphasis */
-            font-weight: 700;
-        }
-        h2 {
-            color: #4f46e5; /* Indigo for section titles */
-            font-weight: 600;
-        }
-        h3 {
-            color: #1f2937; /* Dark gray for sub-sections */
-            font-weight: 600;
-        }
-        .section-divider {
-            border-top: 1px dashed #d1d5db; /* Dashed line for a subtle break */
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-        }
-        .activity-item {
-            background-color: #f9fafb;/* Slightly different background for activity blocks */
-            border-left: 4px solid #20c997; /* Indigo border on the left */
-            padding: 1rem 1.5rem;
-            border-radius: 0.75rem;
-            margin-bottom: 1rem;
-        }
-        .joint-event-item {
-            background-color: #f9fafb; /* Light teal background */
-            border-left: 4px solid #6366f1; /* Vibrant teal border */
-        }
-        .emoji {
-            margin-right: 0.5rem;
-        }
-        .gradient-text {
-            background: linear-gradient(to right, #ec4899, #ef4444); /* Pink to Red gradient */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        /* Specific styles for the columns */
-        .column-header {
-            font-weight: 700;
-            text-align: center;
-            padding-bottom: 1rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #e5e7eb;
-        }
-        .boy-column-header {
-            color: #3b82f6; /* Blue for boys */
-        }
-        .girl-column-header {
-            color: #ec4899; /* Pink for girls */
-        }
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .itinerary-grid {
-                grid-template-columns: 1fr !important; /* Stack columns on small screens */
-            }
-            .itinerary-grid > div {
-                border-right: none !important; /* Remove right border on small screens */
-                border-bottom: 1px solid #e5e7eb; /* Add bottom border between stacked columns */
-                padding-bottom: 1.5rem;
-                margin-bottom: 1.5rem;
-            }
-            .itinerary-grid > div:last-child {
-                border-bottom: none; /* No bottom border for the last stacked column */
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg" href="/data/jtgamesfavicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JTNTT Games</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!--CSS Styles-->>
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    h1 { font-family: "Oswald", serif; } 
+
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+    body { font-family: "Merriweather", serif;} 
+
+    h1 {
+    font-family: "Oswald";
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000000;
+    }
+
+    .page{
+      display:flex;
+      flex-direction: column;
+      gap:30px;
+    }
+
+    .header-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* Aligns all child items (image and paragraph) vertically */
+    color:black;
+    background-color: #ffffff;
+    padding: 5px;
+    width: 100%;
+    height: 60px;
+    position: fixed; /* Make the header fixed to the top */
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #e7e5e5;
+    }
+
+    .logo {
+    width: 170px;
+    }
+
+    .flex-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 5px;
+    max-width: 36rem; /* Equivalent to 576px */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .button-container{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap:10px;
+
+    }
+
+    .description {
+    color:black;
+    margin-top: 2px;
+    margin-bottom: 1.5rem;
+    font-family: "Oswald";
+    font-size: 18px;
+    line-height: 20px;
+    }
+
+    .flex-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 15vh;
+    width: 90vw;
+    align-items: flex-start;
+    padding: 20px 20px;
+    color: black;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 3px;
+    }
+
+    .text-container{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .game-title{
+    font-family: "Oswald";
+    font-size: 1.5rem;
+    text-align: flex-start; 
+    }
+    
+    .game-description{
+    font-family: "Oswald";
+    font-weight: lighter;
+    font-size: 1.1rem;
+    color: rgb(87, 87, 87);
+    }
+
+    .game-icon {
+    width: 70px; 
+    }
+
+    footer {
+      text-align: center;
+      font-family: "Oswald";
+      font-size: 1rem;
+      color: rgb(87, 87, 87);
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+
+  </style>
 </head>
-<body>
-<div class="container">
-    <header class="text-center mb-10">
-        <h1 class="text-5xl mb-4 leading-tight">
-            <span class="gradient-text">Splash Page while things are being set up lol</span>
-        </h1>
 
-        <p>
-            Test links:
-            <li><a href="public/nyt_landing.html">Contact Me!</a></li>
-        </p>
+<body class="page">
+  <!--Header Bar-->
+  <header class="header-bar">
+    <a href="../index.html">
+      <img class="logo" href="index.html" src="data/jtgameslogo.svg" alt="???">
+    </a>
+  </header>
 
-        <p class="text-lg text-gray-500 mt-2">📍 Have fun here</p>
+  <!-- Main Content -->
+  <div class="flex-container">
+      <h1>
+        Good evening.
+      </h1>
 
-    </header>
+      <p class="description">
+        Our personal take on the New York Times word puzzles that we play every day together!
+      </p>
 
-    <footer class="text-center text-gray-500 text-lg mt-10">
-        <p>❤️ A Note from Thu & Jon ❤️</p>
-        <p class="mt-2">
-            We seriously can't wait to see and celebrate with all of you soon! Reach out with any questions!
-        </p>
-    </footer>
-</div>
+      <div class="button-container">
+      <!-- Main Buttons -->
+      <a href="/wordle" class="flex-button" style="background-color:#D4D7E0">
+        <div class="text-container">
+          <p class="game-title">
+            Wordle
+          </p>
+          <p class="game-description">
+            Play wordle
+          </p>
+        </div>
+        <img src="data/wordle.svg" alt="game icon" class="game-icon">
+      </a>
+
+      <a href="/crossword" class="flex-button" style="background-color:#6494E8">
+        <div class="text-container">
+          <p class="game-title">
+            Mini Crossword
+          </p>
+          <p class="game-description">
+            Play Mini Crossword
+          </p>
+        </div>
+        <img src="data/minicross.svg" alt="game icon" class="game-icon">
+      </a>
+
+      <a href="/connections?d=0" class="flex-button" style="background-color:#AFE0DA">
+        <div class="text-container">
+          <p class="game-title">
+            Connections
+          </p>
+          <p class="game-description">
+            Play Connections
+          </p>
+        </div>
+        <img src="data/connections.svg" alt="game icon" class="game-icon">
+      </a>
+
+      <a href="/connections?d=1" class="flex-button" style="background-color:#B1A8F7">
+        <div class="text-container">
+          <p class="game-title">
+            Connections (Hard)
+          </p>
+          <p class="game-description">
+            Play Connections
+          </p>
+        </div>
+        <img src="data/connections.svg" alt="game icon" class="game-icon">
+      </a>
+      </div>
+
+      <footer>
+        💛 By Jon & Thu 💛
+      </footer>
+  </div>
 </body>
 </html>
