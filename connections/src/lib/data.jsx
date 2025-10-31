@@ -31,21 +31,25 @@ export const CONNECTION_GAMES = [
       category: "Countries Thu and Jon Recently Visited",
       words: ["Canada", "Vietnam", "Japan", "Singapore"],
       difficulty: 1,
+      imageSrc: "https://i.ytimg.com/vi/lNUxJ6SL7T0/hq720.jpg",
     },
     {
       category: "Thu and Jon's Favorite Drinks",
       words: ["Coke Zero", "Boba", "Ramune", "Coffee"],
       difficulty: 2,
+      imageSrc: "https://i1.sndcdn.com/artworks-qEQaQyAKZ9JTF5C7-srbBHQ-t1080x1080.jpg",
     },
     {
       category: "Thu and Jon's Favorite Foods",
       words: ["Sushi", "Poutine", "Steak", "Cake"],
       difficulty: 3,
+      imageSrc: "https://people.com/thmb/O6PzGMHZplKPtMekeJJSoqQFIIU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(749x0:751x2)/gordon-ramsay-10-8dbbe3821e5a4dcba91b133523c525c0.jpg",
     },
     {
       category: "Running Races Thu and Jon have Run Together",
       words: ["Cherry Blossom", "North Olympic Discovery", "Craft Classic", "Turkey Trot"],
       difficulty: 4,
+      imageSrc: "https://rsu-photos-v2-v2prod.s3.amazonaws.com/thumbs_v3/race_57331_238816_cb6bd093-1fe6-4091-a7d9-3777e4cb6d13.jpg",
     },
   ],
 ];
